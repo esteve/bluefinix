@@ -1,0 +1,43 @@
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: /
+
+  - type: dnf
+    install:
+      packages:
+        - nix
+        - bees
+        - brave-browser
+        - duperemove
+        - fdupes
+        - fish
+        - git-filter-repo
+        - gnome-boxes
+        - image-builder
+        - jdupes
+        - keyd
+        - libvirt-devel
+        - quickemu
+        - rEFInd
+        - sbsigntools
+        - vagrant
+        - vim-default-editor
+    remove:
+      packages:
+        - nano-default-editor
+
+  - type: script
+    snippets:
+      - "find /nix"
+      - "rm -rfv /nix"
+      - "mkdir -v /nix"
+
+  - type: systemd
+    system:
+      enabled:
+        - nix.mount
+        - nix-daemon.service
+
+  - type: signing
