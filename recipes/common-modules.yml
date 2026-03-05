@@ -5,6 +5,9 @@ modules:
         destination: /
 
   - type: dnf
+    repos:
+      files:
+        - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
     install:
       packages:
         - nix
