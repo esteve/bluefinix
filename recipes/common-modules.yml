@@ -8,9 +8,9 @@ modules:
     repos:
       files:
         - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
     install:
       packages:
-        - nix
         - bees
         - brave-browser
         - duperemove
@@ -22,9 +22,11 @@ modules:
         - jdupes
         - keyd
         - libvirt-devel
+        - nix
         - quickemu
         - rEFInd
         - sbsigntools
+        - terra-release
         - vagrant
         - vim-default-editor
     remove:
