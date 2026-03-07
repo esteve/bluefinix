@@ -24,6 +24,7 @@ modules:
         - keyd
         - libvirt-devel
         - nix
+        - pipx
         - quickemu
         - rEFInd
         - sbsigntools
