@@ -18,6 +18,8 @@ modules:
     repos:
       files:
         - https://pkgs.tailscale.com/stable/centos/10/tailscale.repo
+
+  - type: dnf
     install:
       packages:
         - tailscale
