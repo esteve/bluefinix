@@ -7,4 +7,7 @@ base-image: ghcr.io/ublue-os/bluefin
 image-version: stable # latest is also supported if you want new updates ASAP
 
 modules:
-    - from-file: common-modules.yml
+  - from-file: common-nix.yml
+  - from-file: common-modules.yml
+
+  - type: signing

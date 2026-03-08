@@ -1,9 +1,4 @@
 modules:
-  - type: files
-    files:
-      - source: system
-        destination: /
-
   - type: dnf
     repos:
       files:
@@ -23,7 +18,6 @@ modules:
         - jdupes
         - keyd
         - libvirt-devel
-        - nix
         - pipx
         - quickemu
         - rEFInd
@@ -34,17 +28,3 @@ modules:
     remove:
       packages:
         - nano-default-editor
-
-  - type: script
-    snippets:
-      - "find /nix"
-      - "rm -rfv /nix"
-      - "mkdir -v /nix"
-
-  - type: systemd
-    system:
-      enabled:
-        - nix.mount
-        - nix-daemon.service
-
-  - type: signing
