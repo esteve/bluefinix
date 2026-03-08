@@ -13,6 +13,9 @@ modules:
     repos:
       keys:
         - https://pkgs.tailscale.com/stable/rhel/10/repo.gpg
+
+  - type: dnf
+    repos:
       files:
         - https://pkgs.tailscale.com/stable/rhel/10/tailscale.repo
     install:
