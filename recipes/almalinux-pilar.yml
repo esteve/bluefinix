@@ -12,7 +12,7 @@ modules:
   - type: dnf
     repos:
       keys:
-        - https://pkgs.tailscale.com/stable/rhel/10/repo.gpg
+        - https://pkgs.tailscale.com/stable/centos/10/repo.gpg
 
   - type: dnf
     repos:
