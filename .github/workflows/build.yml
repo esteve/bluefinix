@@ -44,3 +44,4 @@ jobs:
           maximize_build_space: true
           build_chunked_oci: true
           use_cache: true
+          build_opts: " --compression-format=zstd "
