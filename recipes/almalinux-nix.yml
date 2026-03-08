@@ -9,4 +9,17 @@ image-version: 10
 modules:
   - from-file: common-nix.yml
 
+  - type: dnf
+    repos:
+      files:
+        - https://pkgs.tailscale.com/stable/rhel/10/tailscale.repo
+    install:
+      packages:
+        - tailscale
+
+  - type: systemd
+    system:
+      enabled:
+        - tailscaled.service
+
   - type: signing
