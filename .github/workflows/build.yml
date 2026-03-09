@@ -45,3 +45,4 @@ jobs:
           build_chunked_oci: true
           use_cache: true
           build_opts: " --compression-format=zstd "
+          max_layers: 256
