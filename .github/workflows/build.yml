@@ -33,7 +33,7 @@ jobs:
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
-        uses: esteve/blue-build-github-action@skip-if-base-unchanged
+        uses: esteve/blue-build-github-action@skip-if-same-packages
         with:
           recipe: ${{ matrix.recipe }}
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
@@ -46,4 +46,4 @@ jobs:
           use_cache: true
           build_opts: " --compression-format=zstd "
           max_layers: 256
-          skip_if_base_unchanged: true
+          skip_if_packages_unchanged: true
